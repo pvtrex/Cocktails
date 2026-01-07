@@ -62,14 +62,12 @@ const Hero = () => {
 		pin: true,
 	 },
 	});
-	videoRef.current.onloadedmetadata=()=>{
-     tl.to(
-		videoRef.current,{
-			currentTime:videoRef.current.duration
-		}
-	  )
-	}
 	
+	videoRef.current.onloadedmetadata = () => {
+	 tl.to(videoRef.current, {
+		currentTime: videoRef.current.duration,
+	 });
+	};
  }, []);
  
  return (
